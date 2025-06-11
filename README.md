@@ -1,0 +1,2 @@
+# MFEShop
+Micro frontends
