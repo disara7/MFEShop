@@ -1,0 +1,3 @@
+services\product-service\.env
+services\product-service\node_modules
+app\product-mfe\node_modules
