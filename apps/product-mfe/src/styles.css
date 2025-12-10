@@ -1,0 +1,6 @@
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; padding: 0; background:#f6f8fa; color:#111; }
+.mfe-root { padding: 24px; max-width:900px; margin: 0 auto; }
+.card { background: white; border-radius:8px; padding:12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom:12px; }
+.product-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap:12px; margin-top:12px; }
+.product-name { font-weight:600; margin-bottom:6px; }
+.product-price { color:#0b8457; font-weight:700; }
