@@ -1,11 +1,30 @@
 <template>
-  <div style="padding:20px">
-    <h2>📦 Order Microfrontend</h2>
-    <OrderList />
+  <div>
+    <h1>Orders</h1>
+    <ul>
+      <li v-for="order in orders" :key="order.id">
+        {{ order.item }} - ${{ order.amount }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import OrderList from "./components/OrderList.vue";
-export default { components: { OrderList } };
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      orders: [],
+    };
+  },
+  async mounted() {
+    try {
+      const response = await axios.get("http://localhost:4002/api/orders");
+      this.orders = response.data;
+    } catch (err) {
+      console.error("Failed to fetch orders:", err);
+    }
+  },
+};
 </script>
